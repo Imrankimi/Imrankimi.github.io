@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project | Imran Hakimi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav scrolled">
+    <a href="index.html" class="nav-logo" aria-label="Home">IH</a>
+    <a href="index.html#projects" class="back-link mono">&larr; Back to Projects</a>
+  </header>
+
+  <main class="project-page">
+    <!-- Filled in by project.js -->
+    <article id="project" hidden>
+      <div class="project-top">
+        <span class="badge" id="pBadge"></span>
+        <span class="org mono" id="pOrg"></span>
+      </div>
+      <h1 class="project-title" id="pTitle"></h1>
+      <p class="modal-period mono" id="pPeriod"></p>
+      <p class="project-overview" id="pOverview"></p>
+      <div class="project-links" id="pLinks"></div>
+
+      <section class="gallery" id="pGallery" hidden>
+        <figure class="gallery-main">
+          <div class="gallery-stage">
+            <button class="side-phone prev" id="sidePrev" aria-label="Previous image" hidden>
+              <span class="phone"><img id="sidePrevImg" alt="" /></span>
+            </button>
+            <button class="gallery-main-btn" id="galleryMainBtn" aria-label="View full size">
+              <span class="phone"><img id="galleryMain" alt="" /></span>
+            </button>
+            <button class="side-phone next" id="sideNext" aria-label="Next image" hidden>
+              <span class="phone"><img id="sideNextImg" alt="" /></span>
+            </button>
+          </div>
+          <figcaption id="galleryCaption"></figcaption>
+        </figure>
+        <div class="gallery-thumbs" id="galleryThumbs"></div>
+      </section>
+
+      <div class="project-content">
+        <div id="pSections"></div>
+        <aside class="project-aside">
+          <h2 class="modal-heading">Tech Stack</h2>
+          <ul class="tags mono" id="pTech"></ul>
+        </aside>
+      </div>
+
+      <nav class="project-pager" id="pPager"></nav>
+    </article>
+
+    <div class="not-found" id="notFound" hidden>
+      <h1 class="project-title">Project not found</h1>
+      <p>That project doesn't exist.</p>
+      <a href="index.html#projects" class="btn btn-outline">Back to Projects</a>
+    </div>
+  </main>
+
+  <!-- Full-size image viewer -->
+  <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+    <button class="lightbox-close" id="lbClose" aria-label="Close">&times;</button>
+    <button class="lightbox-nav prev" id="lbPrev" aria-label="Previous image">&#8249;</button>
+    <figure>
+      <span class="phone"><img id="lbImg" alt="" /></span>
+      <figcaption id="lbCaption"></figcaption>
+    </figure>
+    <button class="lightbox-nav next" id="lbNext" aria-label="Next image">&#8250;</button>
+  </dialog>
+
+  <footer class="footer mono">
+    <p>Designed &amp; built by Imran Hakimi · <span id="year"></span></p>
+    <p>Built with HTML, CSS &amp; JavaScript</p>
+  </footer>
+
+  <script src="projects.js"></script>
+  <script src="project.js"></script>
+</body>
+</html>
